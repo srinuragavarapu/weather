@@ -27,7 +27,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.virtusa.App</mainClass>
+							<mainClass>com.srini.App</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
