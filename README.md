@@ -17,3 +17,8 @@
   
 ## What will be the output this project?
   It prints Tabluar formatted weather details on console.
+  
+## Have you implemented Unit Test Cases?
+	Yes Unit Test Cases were implemented for the following classes.
+		Rest client : This Client is used to send http client and get data as String.
+		ForecastHelper : ForecastHelper is used to do logic.
