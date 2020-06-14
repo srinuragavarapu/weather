@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public class Show {
 	
-	public static void inTable(ForecastModel fm) {
+	public static void inTable(ForecastModel fm){
 		Optional<LinkedHashMap<String, Object>> firstRecord = fm.getPeriods().stream().findFirst();
 		if(firstRecord.isPresent()) {
 			System.out.format("%5s %-20s %-30s %-30s %-10s %-10s %-5s %-10s %-15s %-10s %-50s",

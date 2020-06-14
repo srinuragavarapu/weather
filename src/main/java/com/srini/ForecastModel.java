@@ -10,7 +10,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class ForecastModel {
 
 	private Map<String, Object> properties;
-	//private List<ForecastPeriodModel> forecastPeriodModels;
 	private List<LinkedHashMap<String, Object>> periods;
 
 	public Map<String, Object> getProperties() {
@@ -21,12 +20,7 @@ public class ForecastModel {
 	public void setProperties(Map<String, Object> properties) {
 		this.periods = (List<LinkedHashMap<String, Object>>)properties.get(("periods"));
 	}
-	
-	/*
-	 * public List<ForecastPeriodModel> getForecastPeriodModels(){ return
-	 * this.forecastPeriodModels; }
-	 */
-	
+		
 	public  List<LinkedHashMap<String, Object>> getPeriods(){
 		return this.periods;
 	}
