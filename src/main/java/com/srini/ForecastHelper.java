@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ForecastHelper {
 
 	private RestClient rc;
+	private String weatherHost = "https://api.weather.gov";
 
 	private String getResponse(String resourceURL) throws IOException {
 		rc = new RestClient();
@@ -25,8 +26,8 @@ public class ForecastHelper {
 	public ForecastModel getForeCast(String lanAndLat) {
 		ForecastModel forecastModel = null;
 		try {
-			PointsModel pointesModel = getPointsData("https://api.weather.gov/points/" + lanAndLat);
-			forecastModel = getForecastData("https://api.weather.gov/gridpoints/" + pointesModel.getCwa() + "/"
+			PointsModel pointesModel = getPointsData(weatherHost+"/points/" + lanAndLat);
+			forecastModel = getForecastData(weatherHost+"/gridpoints/" + pointesModel.getCwa() + "/"
 					+ pointesModel.getGridX() + "," + pointesModel.getGridY() + "/forecast");
 		} catch (FileNotFoundException foe) {
 			// foe.printStackTrace();
